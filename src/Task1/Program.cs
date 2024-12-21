@@ -16,6 +16,7 @@ class Program
             .Select(number => int.Parse(number.Trim()))
             .Where(number => number % 2 == 0)
             .ToArray();
+        
         var output = string.Join(separator, evenNumbers);
         await File.WriteAllTextAsync(outputFilePath, output);
         
